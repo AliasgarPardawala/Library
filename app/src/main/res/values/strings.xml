@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Library</string>
+
+    <string name="book_description"><u>BOOK DESCRIPTION</u></string>
+    <string name="reviews"><u>COMMUNITY REVIEWS</u></string>
+    <string name="login_state">Log In</string>
+    <string name="spinner_prompt">Select Genre</string>
+    <string name="details"><b><u>Enter Book Details</u></b></string>
+    
+    <array name="spinnerItems">
+        <item>Fiction</item>
+        <item>Mystery</item>
+        <item>Romance</item>
+        <item>Fiction</item>
+        <item>Fiction</item>
+        <item>All</item>
+    </array>
+</resources>

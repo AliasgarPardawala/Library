@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/bookListFragment">
+
+    <fragment
+        android:id="@+id/bookListFragment"
+        android:name="com.pardawala.aliasgar.library.ui.BookListFragment"
+        android:label="Books"
+        tools:layout="@layout/book_list" >
+        <action
+            android:id="@+id/action_bookListFragment_to_bookFragment"
+            app:destination="@id/bookFragment" />
+        <action
+            android:id="@+id/action_bookListFragment_to_addFragment"
+            app:destination="@id/addFragment" />
+        <action
+            android:id="@+id/action_bookListFragment_to_favouritesFragment"
+            app:destination="@id/favouritesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/bookFragment"
+        android:name="com.pardawala.aliasgar.library.ui.BookFragment"
+        android:label="{title}"
+        tools:layout="@layout/fragment_book" >
+        <argument
+            android:name="Book"
+            app:argType="com.pardawala.aliasgar.library.Book" />
+        <argument
+            android:name="title"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_bookFragment_to_reviewFragment"
+            app:destination="@id/reviewFragment" />
+        <action
+            android:id="@+id/action_bookFragment_to_noteFragment"
+            app:destination="@id/noteFragment" />
+    </fragment>
+    <argument
+        android:name="title"
+        app:argType="string" />
+    <fragment
+        android:id="@+id/reviewFragment"
+        android:name="com.pardawala.aliasgar.library.ui.ReviewFragment"
+        android:label="ReviewFragment" >
+        <argument
+            android:name="rating"
+            app:argType="float" />
+    </fragment>
+    <fragment
+        android:id="@+id/addFragment"
+        android:name="com.pardawala.aliasgar.library.ui.AddFragment"
+        android:label="AddFragment" >
+        <action
+            android:id="@+id/action_addFragment_to_favouritesFragment"
+            app:destination="@id/favouritesFragment" />
+        <action
+            android:id="@+id/action_addFragment_to_bookListFragment"
+            app:destination="@id/bookListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/favouritesFragment"
+        android:name="com.pardawala.aliasgar.library.ui.FavouritesFragment"
+        android:label="FavouritesFragment" >
+        <action
+            android:id="@+id/action_favouritesFragment_to_bookListFragment"
+            app:destination="@id/bookListFragment" />
+        <action
+            android:id="@+id/action_favouritesFragment_to_addFragment"
+            app:destination="@id/addFragment" />
+        <action
+            android:id="@+id/action_favouritesFragment_to_bookFragment"
+            app:destination="@id/bookFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/noteFragment"
+        android:name="com.pardawala.aliasgar.library.ui.NoteFragment"
+        android:label="Note"
+        tools:layout="@layout/fragment_note">
+        <argument
+            android:name="title"
+            app:argType="string" />
+    </fragment>
+</navigation>

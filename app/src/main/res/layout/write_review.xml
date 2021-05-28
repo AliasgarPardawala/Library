@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="ui.ReviewFragment">
+
+    <TextView
+        android:id="@+id/rat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:textAlignment="center"
+        android:text="My Rating" />
+
+    <RatingBar
+        android:id="@+id/rating_bar"
+        android:layout_width="wrap_content"
+        android:layout_margin="12dp"
+        android:layout_below="@id/rat"
+        android:theme="@style/RatingBar"
+        android:layout_centerHorizontal="true"
+        android:layout_height="wrap_content"/>
+
+    <View
+        android:id="@+id/hbar"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/browser_actions_divider_color"
+        android:layout_below="@id/rating_bar" />
+
+
+    <EditText
+        android:id="@+id/review"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:hint="Write review Here(optional)"
+        android:layout_below="@id/hbar"
+        android:background="@null" />
+
+
+</RelativeLayout>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/favouritesFragment"
+        android:title="Favourite Books"
+        android:icon="@drawable/fav" />
+
+    <item
+        android:id="@+id/bookListFragment"
+        android:title="Discover"
+        android:icon="@drawable/search" />
+
+    <item
+        android:id="@+id/addFragment"
+        android:title="Add Book"
+        android:icon="@drawable/add" />
+
+</menu>
